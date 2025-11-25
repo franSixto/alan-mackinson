@@ -133,7 +133,7 @@ export default function Navigation() {
                             initial="closed"
                             animate="open"
                             exit="closed"
-                            className="fixed inset-0 bg-black/95 backdrop-blur-md text-white flex flex-col justify-center items-center md:hidden"
+                            className="fixed inset-0 bg-black/90 backdrop-blur-xl text-white flex flex-col justify-center items-center md:hidden"
                         >
                             <ul className="flex flex-col items-center gap-8">
                                 {links.map((link, i) => (

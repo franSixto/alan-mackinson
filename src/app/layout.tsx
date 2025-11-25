@@ -16,12 +16,34 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: "Alan Mackinson | Composer",
-  description: "Official portfolio of composer Alan Mackinson.",
+  description: "Official portfolio of composer Alan Mackinson. Electroacoustic composer based in Córdoba, Argentina.",
   icons: {
     icon: [
       { url: "/logo.svg", type: "image/svg+xml" },
       { url: "/logo.png", type: "image/png" },
     ],
+  },
+  openGraph: {
+    title: "Alan Mackinson | Composer",
+    description: "Electroacoustic composer based in Córdoba, Argentina.",
+    url: "https://alanmackinson.com",
+    siteName: "Alan Mackinson",
+    images: [
+      {
+        url: "/Alan2.webp",
+        width: 1200,
+        height: 630,
+        alt: "Alan Mackinson - Composer",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Alan Mackinson | Composer",
+    description: "Electroacoustic composer based in Córdoba, Argentina.",
+    images: ["/Alan2.webp"],
   },
 };
 
