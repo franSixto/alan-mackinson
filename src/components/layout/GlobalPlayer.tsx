@@ -7,7 +7,7 @@ import { useEffect, useRef } from "react";
 import { Howl } from "howler";
 
 export default function GlobalPlayer() {
-    const { isPlaying, currentTrack, volume, togglePlay } = usePlayerStore();
+    const { isPlaying, currentTrack, volume, togglePlay, setVolume } = usePlayerStore();
     const soundRef = useRef<Howl | null>(null);
 
     useEffect(() => {
@@ -78,11 +78,17 @@ export default function GlobalPlayer() {
                         </button>
                     </div>
 
-                    <div className="hidden md:flex items-center gap-2 w-32">
-                        <Volume2 size={16} className="text-gray-400" />
-                        <div className="h-1 bg-gray-700 rounded-full flex-1 overflow-hidden">
-                            <div className="h-full bg-white w-1/2"></div>
-                        </div>
+                    <div className="hidden md:flex items-center gap-2 w-32 group">
+                        <Volume2 size={16} className="text-gray-400 group-hover:text-white transition-colors" />
+                        <input
+                            type="range"
+                            min="0"
+                            max="1"
+                            step="0.01"
+                            value={volume}
+                            onChange={(e) => setVolume(parseFloat(e.target.value))}
+                            className="w-full h-1 bg-gray-700 rounded-lg appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-3 [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:rounded-full hover:[&::-webkit-slider-thumb]:bg-gold-200 transition-all"
+                        />
                     </div>
                 </div>
             </motion.div>

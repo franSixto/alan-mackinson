@@ -7,13 +7,13 @@ import { usePlayerStore } from "@/lib/store/playerStore";
 const projects = [
   {
     id: "1",
-    title: "The Silent Void",
+    title: "Tras un manto de neblinas",
     category: "Film Score",
-    year: "2024",
+    year: "2023",
     image: "https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=2988&auto=format&fit=crop",
     track: {
       id: "t1",
-      title: "Void Theme",
+      title: "Encuentro (feat. Felipe Ludueña)",
       artist: "Alan Mackinson",
       src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3", // Placeholder
       cover: "https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=2988&auto=format&fit=crop"
@@ -21,13 +21,13 @@ const projects = [
   },
   {
     id: "2",
-    title: "Neon Horizon",
-    category: "Album",
-    year: "2023",
+    title: "Paréntesis",
+    category: "Single",
+    year: "2022",
     image: "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=3000&auto=format&fit=crop",
     track: {
       id: "t2",
-      title: "Night Drive",
+      title: "Paréntesis",
       artist: "Alan Mackinson",
       src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3", // Placeholder
       cover: "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=3000&auto=format&fit=crop"
@@ -35,13 +35,13 @@ const projects = [
   },
   {
     id: "3",
-    title: "Ethereal",
-    category: "Symphony",
-    year: "2022",
+    title: "Cotidianidad Esquizofónica",
+    category: "Experimental",
+    year: "2021",
     image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=2970&auto=format&fit=crop",
     track: {
       id: "t3",
-      title: "Movement I",
+      title: "Cotidianidad Esquizofónica",
       artist: "Alan Mackinson",
       src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3", // Placeholder
       cover: "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=2970&auto=format&fit=crop"
@@ -110,7 +110,7 @@ export default function Home() {
           transition={{ duration: 0.8 }}
           className="relative aspect-[3/4] bg-gray-900 overflow-hidden rounded-sm"
         >
-          <img src="https://images.unsplash.com/photo-1507838153414-b4b713384ebd?q=80&w=2670&auto=format&fit=crop" alt="Alan Mackinson" className="object-cover w-full h-full opacity-80 hover:opacity-100 transition-opacity duration-700" />
+          <img src="/Alan.webp" alt="Alan Mackinson" className="object-cover w-full h-full opacity-80 hover:opacity-100 transition-opacity duration-700" />
         </motion.div>
       </section>
 

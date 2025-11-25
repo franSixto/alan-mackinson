@@ -13,26 +13,25 @@ export default function AboutPage() {
                     className="mb-20"
                 >
                     <h1 className="text-6xl md:text-8xl font-serif mb-12 leading-none">
-                        The Architect <br /> of <span className="text-gold-200 italic">Silence</span>.
+                        Composer & <br /> Sound <span className="text-gold-200 italic">Artist</span>.
                     </h1>
 
                     <div className="grid md:grid-cols-2 gap-12 items-start">
                         <div className="text-lg text-gray-400 leading-relaxed space-y-6">
                             <p>
-                                Alan Mackinson is not just a composer; he is a sonic architect. Born in a small coastal town, his early exposure to the relentless rhythm of the ocean and the stark silence of winter landscapes shaped his unique auditory palette.
+                                Based in Córdoba, Argentina, Alan Mackinson is a composer and sound artist whose work navigates the delicate tension between organic resonance and electroacoustic experimentation.
                             </p>
                             <p>
-                                His work defies easy categorization, sitting comfortably in the liminal space between classical orchestration and avant-garde electronics. He treats silence not as an absence of sound, but as a canvas upon which emotions are painted with delicate precision.
+                                His sonic identity is forged in the intersection of the tangible and the abstract. From the cinematic landscapes of the documentary <em>"Tras un manto de neblinas"</em> to the introspective textures of <em>"Cotidianidad Esquizofónica"</em>, Alan's compositions are immersive narratives that challenge the listener's perception of time and space.
                             </p>
                             <p>
-                                "Music is the language we speak when words fail," Alan often says. This philosophy drives every composition, from intimate piano solos to sprawling cinematic scores that have captivated audiences worldwide.
+                                Selected for the prestigious <em>Escuela de Composición Electroacústica (JIME)</em>, his work with collectives like <em>Labarte Sonoro</em> and <em>Púrpura Ceniza</em> underscores a commitment to pushing the boundaries of contemporary sound. He treats silence not as an absence, but as a canvas upon which the "schizophonic" reality of modern life is deconstructed and rebuilt.
                             </p>
                         </div>
                         <div className="relative">
-                            <div className="aspect-[4/5] bg-gray-900 overflow-hidden mb-4">
-                                <img src="https://images.unsplash.com/photo-1507838153414-b4b713384ebd?q=80&w=2670&auto=format&fit=crop" alt="Alan Mackinson Portrait" className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-1000" />
+                            <div className="aspect-[4/5] bg-gray-900 overflow-hidden">
+                                <img src="/Alan2.webp" alt="Alan Mackinson Portrait" className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-1000" />
                             </div>
-                            <p className="text-xs uppercase tracking-widest text-gray-500 text-right">Portrait by Sarah Jenkins</p>
                         </div>
                     </div>
                 </motion.div>
@@ -44,12 +43,12 @@ export default function AboutPage() {
                     transition={{ duration: 1, delay: 0.2 }}
                     className="border-t border-white/10 pt-20"
                 >
-                    <h2 className="text-3xl font-serif mb-12">Awards & Recognition</h2>
+                    <h2 className="text-3xl font-serif mb-12">Recognition & Education</h2>
                     <div className="grid md:grid-cols-3 gap-8">
                         {[
-                            { year: "2024", award: "Best Original Score", org: "Cannes Film Festival" },
-                            { year: "2023", award: "Composer of the Year", org: "International Music Awards" },
-                            { year: "2022", award: "Breakthrough Artist", org: "Classical FM" },
+                            { year: "2023", award: "Original Score", org: "Tras un manto de neblinas" },
+                            { year: "2022", award: "Selected Composer", org: "JIME Electroacoustic School" },
+                            { year: "2021", award: "Featured Work", org: "Cotidianidad Esquizofónica" },
                         ].map((item, i) => (
                             <div key={i} className="group">
                                 <span className="block text-gold-200 text-sm mb-2">{item.year}</span>

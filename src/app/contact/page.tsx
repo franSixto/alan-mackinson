@@ -59,16 +59,19 @@ export default function ContactPage() {
                         <div>
                             <h3 className="text-xs uppercase tracking-widest text-gray-500 mb-4">Socials</h3>
                             <div className="flex gap-6">
-                                <a href="#" className="hover:text-gold-200 transition-colors"><Instagram size={24} /></a>
-                                <a href="#" className="hover:text-gold-200 transition-colors"><Twitter size={24} /></a>
-                                <a href="#" className="hover:text-gold-200 transition-colors"><Mail size={24} /></a>
+                                <a href="https://instagram.com/alanmackinson" target="_blank" rel="noopener noreferrer" className="hover:text-gold-200 transition-colors flex items-center gap-2">
+                                    <Instagram size={24} /> <span className="text-sm">@alanmackinson</span>
+                                </a>
+                                <a href="https://soundcloud.com/alanmackinson" target="_blank" rel="noopener noreferrer" className="hover:text-gold-200 transition-colors flex items-center gap-2">
+                                    <span className="text-sm font-serif">SoundCloud</span>
+                                </a>
                             </div>
                         </div>
 
                         <div className="pt-8 border-t border-white/10">
                             <p className="text-gray-500 text-sm">
-                                Based in Los Angeles, CA.<br />
-                                Available for global travel.
+                                Based in Córdoba, Argentina.<br />
+                                Available for global collaboration.
                             </p>
                         </div>
                     </motion.div>

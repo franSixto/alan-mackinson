@@ -8,13 +8,13 @@ import { usePlayerStore } from "@/lib/store/playerStore";
 const allProjects = [
     {
         id: "1",
-        title: "The Silent Void",
+        title: "Tras un manto de neblinas",
         category: "Film Score",
-        year: "2024",
+        year: "2023",
         image: "https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=2988&auto=format&fit=crop",
         track: {
             id: "t1",
-            title: "Void Theme",
+            title: "Encuentro (feat. Felipe Ludueña)",
             artist: "Alan Mackinson",
             src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
             cover: "https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=2988&auto=format&fit=crop"
@@ -22,13 +22,13 @@ const allProjects = [
     },
     {
         id: "2",
-        title: "Neon Horizon",
-        category: "Album",
-        year: "2023",
+        title: "Paréntesis",
+        category: "Single",
+        year: "2022",
         image: "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=3000&auto=format&fit=crop",
         track: {
             id: "t2",
-            title: "Night Drive",
+            title: "Paréntesis",
             artist: "Alan Mackinson",
             src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
             cover: "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=3000&auto=format&fit=crop"
@@ -36,13 +36,13 @@ const allProjects = [
     },
     {
         id: "3",
-        title: "Ethereal",
-        category: "Symphony",
-        year: "2022",
+        title: "Cotidianidad Esquizofónica",
+        category: "Experimental",
+        year: "2021",
         image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=2970&auto=format&fit=crop",
         track: {
             id: "t3",
-            title: "Movement I",
+            title: "Cotidianidad Esquizofónica",
             artist: "Alan Mackinson",
             src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
             cover: "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=2970&auto=format&fit=crop"
@@ -50,49 +50,21 @@ const allProjects = [
     },
     {
         id: "4",
-        title: "Glass Structures",
-        category: "Installation",
-        year: "2023",
+        title: "Labarte Sonoro",
+        category: "Collective",
+        year: "2022",
         image: "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=2960&auto=format&fit=crop",
         track: {
             id: "t4",
-            title: "Reflections",
+            title: "Session I",
             artist: "Alan Mackinson",
             src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
             cover: "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=2960&auto=format&fit=crop"
         }
-    },
-    {
-        id: "5",
-        title: "Midnight Tokyo",
-        category: "Album",
-        year: "2021",
-        image: "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?q=80&w=2787&auto=format&fit=crop",
-        track: {
-            id: "t5",
-            title: "Neon Rain",
-            artist: "Alan Mackinson",
-            src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3",
-            cover: "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?q=80&w=2787&auto=format&fit=crop"
-        }
-    },
-    {
-        id: "6",
-        title: "Solstice",
-        category: "Film Score",
-        year: "2020",
-        image: "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?q=80&w=2874&auto=format&fit=crop",
-        track: {
-            id: "t6",
-            title: "Winter Sun",
-            artist: "Alan Mackinson",
-            src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3",
-            cover: "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?q=80&w=2874&auto=format&fit=crop"
-        }
     }
 ];
 
-const categories = ["All", "Film Score", "Album", "Symphony", "Installation"];
+const categories = ["All", "Film Score", "Single", "Experimental", "Collective"];
 
 export default function ProjectsPage() {
     const [filter, setFilter] = useState("All");
