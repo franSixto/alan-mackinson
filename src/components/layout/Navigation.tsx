@@ -99,7 +99,7 @@ export default function Navigation() {
                                         <motion.div
                                             layoutId="navbar-underline"
                                             className="absolute bottom-0 left-0 right-0 h-[1px] bg-gold-200"
-                                            transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                                            transition={{ type: "tween", duration: 0.3, ease: "easeInOut" }}
                                         />
                                     )}
 
@@ -107,7 +107,7 @@ export default function Navigation() {
                                         <motion.div
                                             layoutId="navbar-hover"
                                             className="absolute bottom-0 left-0 right-0 h-[1px] bg-white/50"
-                                            transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                                            transition={{ type: "tween", duration: 0.2, ease: "easeInOut" }}
                                         />
                                     )}
                                 </Link>
