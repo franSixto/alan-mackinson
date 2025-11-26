@@ -69,7 +69,12 @@ export default function Navigation() {
     };
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 py-6 px-6 md:px-8 mix-blend-difference text-white">
+        <nav
+            className={cn(
+                "fixed top-0 left-0 right-0 z-50 py-6 px-6 md:px-8 text-white transition-colors duration-300",
+                isOpen ? "mix-blend-normal" : "mix-blend-difference"
+            )}
+        >
             <div className="max-w-7xl mx-auto flex items-center justify-between">
                 <Link href="/" className="relative group z-50 flex items-center gap-3">
                     <img src="/logo.svg" alt="Alan Mackinson" className="h-8 w-8 md:h-10 md:w-10 transition-transform group-hover:scale-105" />
@@ -119,50 +124,63 @@ export default function Navigation() {
                 {/* Mobile Hamburger */}
                 <button
                     onClick={() => setIsOpen(!isOpen)}
-                    className="md:hidden z-50 text-white focus:outline-none"
+                    className="md:hidden z-[60] relative text-white focus:outline-none"
                     aria-label={isOpen ? "Close menu" : "Open menu"}
                 >
                     {isOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>
 
-                {/* Mobile Overlay */}
+                {/* Mobile Menu */}
                 <AnimatePresence>
                     {isOpen && (
-                        <motion.div
-                            variants={menuVariants}
-                            initial="closed"
-                            animate="open"
-                            exit="closed"
-                            className="fixed inset-0 bg-black/90 backdrop-blur-xl text-white flex flex-col justify-center items-center md:hidden"
-                        >
-                            <ul className="flex flex-col items-center gap-8">
-                                {links.map((link, i) => (
-                                    <motion.li
-                                        key={link.href}
-                                        custom={i}
-                                        variants={linkVariants}
-                                    >
-                                        <Link
-                                            href={link.href}
-                                            className={cn(
-                                                "text-4xl font-serif tracking-tight hover:text-gold-200 transition-colors",
-                                                pathname === link.href ? "text-gold-200 italic" : "text-white"
-                                            )}
-                                        >
-                                            {link.label}
-                                        </Link>
-                                    </motion.li>
-                                ))}
-                            </ul>
-
+                        <>
+                            {/* Backdrop with blur and darkening */}
                             <motion.div
                                 initial={{ opacity: 0 }}
-                                animate={{ opacity: 1, transition: { delay: 0.5 } }}
-                                className="absolute bottom-12 text-xs uppercase tracking-widest text-gray-500"
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 0.3 }}
+                                className="fixed inset-0 z-40 bg-black/80 backdrop-blur-md md:hidden"
+                                onClick={() => setIsOpen(false)}
+                            />
+
+                            {/* Menu Content */}
+                            <motion.div
+                                variants={menuVariants}
+                                initial="closed"
+                                animate="open"
+                                exit="closed"
+                                className="fixed inset-0 z-50 flex flex-col justify-center items-center md:hidden pointer-events-none"
                             >
-                                Córdoba, Argentina
+                                <ul className="flex flex-col items-center gap-8 pointer-events-auto">
+                                    {links.map((link, i) => (
+                                        <motion.li
+                                            key={link.href}
+                                            custom={i}
+                                            variants={linkVariants}
+                                        >
+                                            <Link
+                                                href={link.href}
+                                                className={cn(
+                                                    "text-4xl font-serif tracking-tight hover:text-gold-200 transition-colors",
+                                                    pathname === link.href ? "text-gold-200 italic" : "text-white"
+                                                )}
+                                            >
+                                                {link.label}
+                                            </Link>
+                                        </motion.li>
+                                    ))}
+                                </ul>
+
+                                <motion.div
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1, transition: { delay: 0.5 } }}
+                                    className="absolute bottom-12 text-xs uppercase tracking-widest text-gray-500"
+                                >
+                                    Córdoba, Argentina
+                                </motion.div>
                             </motion.div>
-                        </motion.div>
+                        </>
                     )}
                 </AnimatePresence>
             </div>
